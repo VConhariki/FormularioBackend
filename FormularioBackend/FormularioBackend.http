@@ -1,0 +1,6 @@
+@FormularioBackend_HostAddress = http://localhost:5047
+
+GET {{FormularioBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
