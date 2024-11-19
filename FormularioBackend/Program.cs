@@ -27,9 +27,16 @@ builder.Services.AddAuthentication(a => { a.DefaultAuthenticateScheme = JwtBeare
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped <IFeedbackRepository, FeedbackRepository>();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) 
+    .AllowCredentials());
+
 
 app.UseHttpsRedirection();
 

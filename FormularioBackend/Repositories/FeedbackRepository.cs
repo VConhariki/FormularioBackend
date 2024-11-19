@@ -12,7 +12,8 @@ namespace FormularioBackend.Repository
         {
             string comandoSql = @"
                 SELECT *
-	                FROM public.""Feedback"";
+	                FROM public.""Feedback""
+                order by 1 asc;
             ";
 
             string connectionString = Helper.ObterConnectionString();
