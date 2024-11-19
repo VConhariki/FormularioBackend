@@ -25,6 +25,7 @@ builder.Services.AddAuthentication(a => { a.DefaultAuthenticateScheme = JwtBeare
         };
     });
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped <IFeedbackRepository, FeedbackRepository>();
 
 var app = builder.Build();
 

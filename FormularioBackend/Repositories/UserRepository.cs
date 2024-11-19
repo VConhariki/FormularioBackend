@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using FormularioBackend.Enum;
 using FormularioBackend.Model;
 using FormularioBackend.Repositories.Interface;
 using FormularioBackend.Scipts;
@@ -38,7 +37,7 @@ namespace FormularioBackend.Repository
             {
                 username = newUser.Username,
                 password = newUser.Password,
-                role = newUser.Role
+                role = newUser.Role,
             });
         }
 
